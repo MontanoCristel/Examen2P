@@ -18,11 +18,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         etparcial1 = findViewById(R.id.etparcial1);
         etparcial2 = findViewById(R.id.etparcial2);
         btnCalcular = findViewById(R.id.btnCalcular);
         tvResultado = findViewById(R.id.tvResultado);
-
 
         btnCalcular.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,20 +31,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    
     private Void calcularPromedio(){
         try {
-            double etparcial1 = Double.parseDouble(etparcial1.getText().toString());
-            double etparcial2 = Double.parseDouble(etparcial2.getText().toString());
+            double parcial1 = Double.parseDouble(etparcial1.getText().toString());
+            double parcial2 = Double.parseDouble(etparcial2.getText().toString());
 
-            double promedio = (etparcial1 + etparcial2) / 2;
+            double promedio = (parcial1 + parcial2) / 2;
 
-
-            tvResultado.setText("Promedio: " + promedio);
+            tvResultado.setText(" " + promedio);
         }  catch ( NumberFormatException e ) {
             tvResultado.setText("Ingrese números válidos");
         }
-
-    }
-
     }
 }
+
