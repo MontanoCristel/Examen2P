@@ -9,7 +9,7 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText etparcial1, etparcial2;
+    private EditText etprimer, etsegundo;
     private Button btnCalcular;
     private TextView tvResultado;
 
@@ -19,8 +19,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        etparcial1 = findViewById(R.id.etparcial1);
-        etparcial2 = findViewById(R.id.etparcial2);
+        etprimer = findViewById(R.id.etprimer);
+        etsegundo = findViewById(R.id.etsegundo);
         btnCalcular = findViewById(R.id.btnCalcular);
         tvResultado = findViewById(R.id.tvResultado);
 
@@ -32,17 +32,17 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    
-    private Void calcularPromedio(){
+
+
+    private void calcularPromedio() {
         try {
-            double parcial1 = Double.parseDouble(etparcial1.getText().toString());
-            double parcial2 = Double.parseDouble(etparcial2.getText().toString());
+            double primero = Double.parseDouble(etprimer.getText().toString());
+            double segundo = Double.parseDouble(etsegundo.getText().toString());
+            //Calcula
+            double promedio = (primero + segundo) / 2;
+            tvResultado.setText("Promedio: " + promedio);
+        } catch (NumberFormatException e) {
 
-            double promedio = (parcial1 + parcial2) / 2;
-
-            tvResultado.setText(" " + promedio);
-        }  catch ( NumberFormatException e ) {
-            tvResultado.setText("Ingrese números válidos");
         }
     }
 }

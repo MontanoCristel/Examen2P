@@ -33,7 +33,7 @@
             android:layout_gravity="center_vertical"/>
 
         <EditText
-            android:id="@+id/etparcial1"
+            android:id="@+id/etprimer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Primer Parcial"/>
@@ -51,10 +51,10 @@
             android:textColor="@android:color/black"
             android:layout_gravity="center_vertical"/>
         <EditText
-            android:id="@+id/etparcial2"
+            android:id="@+id/etsegundo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/etparcial1"
+            android:layout_below="@id/etprimer"
             android:layout_marginTop="16dp"
             android:hint="Segundo Parcial"/>
     </LinearLayout>
@@ -84,7 +84,7 @@
         android:id="@+id/btnCalcular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/etparcial2"
+        android:layout_below="@id/etsegundo"
         android:layout_marginTop="16dp"
         android:text="Calcular"
         android:layout_gravity="center"/>
